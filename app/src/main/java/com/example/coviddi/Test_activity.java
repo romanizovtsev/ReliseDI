@@ -3,6 +3,7 @@ package com.example.coviddi;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -33,6 +34,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Test_activity extends AppCompatActivity {
     private FirebaseFirestore database;
@@ -56,6 +58,7 @@ public class Test_activity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Log.e("Язык", Resources.getSystem().getConfiguration().locale.getLanguage());
 
         final LinearLayout linear = findViewById(R.id.linear);
         i=0;

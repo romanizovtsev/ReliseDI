@@ -133,41 +133,66 @@
             android:textColor="@color/black"
             android:textSize="13sp"
             android:gravity="center_horizontal"/>
+
     </LinearLayout>
-    <TextView
-        android:id="@+id/Title2"
-        android:layout_width="match_parent"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/StatTitle2"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:background="@drawable/back">
 
-    <TextView
-        android:id="@+id/Date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/StatTitle2"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        android:text="@string/date"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        android:gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/graphView"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/date"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Title2" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graphView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/onfoBut"
         android:layout_width="match_parent"
+        android:background="@drawable/buttonround"
         android:text="@string/InfoBut"
 
         android:layout_height="65dp" />
     <Button
         android:id="@+id/TestBut"
+        android:background="@drawable/buttonround"
         android:layout_width="match_parent"
         android:text="@string/TestBut"
         android:layout_height="65dp"

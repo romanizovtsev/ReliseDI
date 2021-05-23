@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.startactivity);
+        setContentView(R.layout.main_activity);
         DataDbHelper dh=new DataDbHelper(this);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 try{
                     Intent intent = new Intent(MainActivity.this,  InfoActivity.class);
-                    startActivity(intent); finish();
+                    startActivity(intent);
                 }catch (Exception e){
                 }
             }
