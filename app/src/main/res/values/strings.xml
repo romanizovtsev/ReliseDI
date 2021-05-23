@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Covid DI</string>
     <string name="StatTitle">Статистика</string>
+    <string name="Test">Тест</string>
     <string name="StatTitle2">Динамика заболеваемости</string>
     <string-array name="Country">
 
@@ -15,12 +16,12 @@
         <item>France</item>
         <item>Germany</item>
         <item>United Kingdom</item>
-
     </string-array>
-    <string name="ConfTitle">Подтвержденные \n случаи</string>
+
+    <string name="ConfTitle">Заболевших</string>
     <string name="RecovTitle">Выздоровевших</string>
     <string name="DeathTitle">Смертей</string>
-    <string name="Settings">Settings</string>
+    <string name="Settings">Настройки</string>
     <string name="RUS">RUS</string>
     <string name="date">20.03.2021-27.03.2021</string>
     <string name="EN">EN</string>
@@ -29,38 +30,38 @@
 
 
 
-    <string name="ap_name">Settings</string>
-    <string name="Language">Language</string>
-    <string name="About_app">About App</string>
-    <string name="Info_name">Actual information about Covid-19</string>
-    <string name="Obz_sved">COVID-19. General information</string>
+    <string name="ap_name">Настройки</string>
+    <string name="Language">Язык</string>
+    <string name="About_app">О приложении</string>
+    <string name="Info_name">Актуальная информация о Covid-19</string>
+    <string name="Obz_sved">COVID-19. Основная информация</string>
     <string name="info_obz">
-        As of today, it is believed that COVID-19 has passed
-        to humans from bats. Did it happen directly, or through an intermediate
-        the owner is not known for certain.
-Incubation period of coronavirus: it is considered (!) That the incubation period lasts up to 14 days.
-        In research 1099
-        patients with a confirmed diagnosis average
-        the incubation period for COVID-19 was four days
-Modeling in a study of 181 patients showed that 2.5%
-        of cases, symptoms develop within 2.2 days, and 97.5%
-        cases within 11.5 days. Average incubation period
-        in this study was 5.1 days.</string>
+        На сегодняшний день считается, что COVID-19 впервые передался
+          человеку от летучих мышей. Случилось все это именно так или "посредником" вируса был кто-то другой
+        -неизвестно.
+Инкубационный период коронавируса: считается (!), Что инкубационный период длится до 14 дней.
+          При исследовании, в котором приняло участие 1099
+          пациента с подтвержденным диагнозом, в среднем
+          инкубационный период COVID-19 составил четыре дня.
+Исследование 181 пациента показало, что  в 2,5%
+          случаев симптомы развиваются в течение 2,2 дней, а в 97,5% случаев
+          - в течение 11,5 дней. Средний инкубационный период
+          в этом исследовании составлял 5,1 дня.</string>
 
     <string name="Simp">
-        To date, there is no complete understanding of
-        the ways of transmission of infection.
-        Initially, it was believed that the first infection occurred in the seafood market in
-        Wuhan province.
-        But, over time, the transmission path from person to person was confirmed.
-The main route of transmission of the coronavirus COVID-19 is contact. Sick or carrier sneezing
-        and / or coughing, spreads mucus particles that contain the virus. Radius
-        spread from a person within 2 meters. In this radius can happen
-        direct infection. Outside this radius, infection occurs
-        on contact with a contaminated surface. Healthy man touching
-        the infected surface becomes contaminated with a virus, further, by touching
-        to the face with his hands, he transfers the virus to the mucous membranes and
-        infection occurs.
+        На сегодняшний день мы не все знаем о
+         пути передачи инфекции.
+         Первоначально считалось, что первое заражение произошло на рынке морепродуктов в г.
+         Ухань.
+         Со временем путь передачи от человека к человеку подтвердился.
+Считается, что основной путь передачи коронавируса - контактный. Чихание больного или кашель,
+        распространяет частицы слизи, содержащие вирус. Радиус
+         распространяться от человека в пределах 2 метров. В этом радиусе может случиться
+         прямое заражение. За пределами этого радиуса происходит заражение
+         при контакте с загрязненной поверхностью. Здоровый человек, трогая
+         инфицированную поверхность, заражается вирусом, в дальнейшем, при прикосновении
+         к лицу руками он переносит вирус на слизистые оболочки и
+         происходит заражение.
     </string>
     <string name="About_razrab">
         Данный проект был выполнен студентами Технопарка
@@ -70,8 +71,8 @@ The main route of transmission of the coronavirus COVID-19 is contact. Sick or c
         Драгун Илья
         Мы очень старались!
     </string>
-    <string name="Feedback">Feedback</string>
-    <string name="Way">Ways of transmission of coronavirus</string>
+    <string name="Feedback">Обратная связь</string>
+    <string name="Way">Пути передачи Covid-19</string>
     <string name="feed_back_click">
        Мы будем очень рады вашим отзывам и предложениям!
         Надеюсь наше приложение было для Вас полезным
@@ -79,22 +80,22 @@ The main route of transmission of the coronavirus COVID-19 is contact. Sick or c
         tut_nichego_net@mail.ru
     </string>
 
-    <string name="Simpom">Symptoms of a coronavirus infection</string>
+    <string name="Simpom">Симпломы Covid-19</string>
     <string name="Simpom2">
-    fever in 99 percent of cases
-    weakness, fatigue in 70 percent of cases
-    dry cough in 59 percent of cases
-    loss of appetite in 40 percent of cases
-    muscle pain in 35 percent of cases
-    shortness of breath in 31 percent of cases
-    coughing up phlegm in 27 percent of cases
-    Other less common symptoms include headache,
-    sore throat, and rhinorrhea (nasal discharge).
-    In addition to respiratory symptoms, there are also
-    gastrointestinal symptoms such as nausea and diarrhea.
+   лихорадка в 99% случаев
+     слабость, утомляемость в 70% случаев
+     сухой кашель в 59% случаев
+     потеря аппетита в 40% случаев
+     мышечные боли в 35% случаев
+     одышка в 31% случаев
+     откашливание мокроты в 27% случаев
+     Другие менее распространенные симптомы включают головную боль,
+     боль в горле и ринорея (выделения из носа).
+     Помимо респираторных симптомов, есть еще
+     желудочно-кишечные симптомы, такие как тошнота и диарея.
 
-    As you can see, the most common symptom of coronavirus
-    infection is fever. But it should be noted that the temperature
-    level is also not indicative. So, out of 1,099 patients admitted to a hospital in Wuhan with
-    COVID-19, temperatures above 37.5 degrees were observed in only 44% of patients.</string>
+    Как видите, самый частый симптом коронавирусной
+     инфекции - это лихорадка. Но следует отметить, что высокая температура
+     также не является гарантированным симптомом. Так, из 1099 пациентов, поступивших в больницу Ухани с
+     COVID-19, температура выше 37,5 градусов наблюдалась только у 44% пациентов.</string>
 </resources>

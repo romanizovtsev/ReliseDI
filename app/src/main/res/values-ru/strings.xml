@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Covid DI</string>
     <string name="StatTitle">Статистика</string>
+    <string name="Test">Тест</string>
     <string name="StatTitle2">Динамика заболеваемости</string>
     <string-array name="Country">
 
@@ -10,7 +11,7 @@
         <item>Англия</item>
     </string-array>
 
-    <string name="ConfTitle">Подтвержденные \n случаи</string>
+    <string name="ConfTitle">Заболевших</string>
     <string name="RecovTitle">Выздоровевших</string>
     <string name="DeathTitle">Смертей</string>
     <string name="Settings">Настройки</string>

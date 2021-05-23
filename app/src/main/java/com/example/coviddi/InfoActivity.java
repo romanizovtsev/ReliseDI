@@ -1,7 +1,9 @@
 package com.example.coviddi;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -16,6 +18,7 @@ public class InfoActivity extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.info_activity);
         Back_Info=(ImageView)findViewById(R.id.info_back);
+        Log.e("Язык", Resources.getSystem().getConfiguration().locale.getLanguage());
         Back_Info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,12 +32,4 @@ public class InfoActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        try{
-            Intent intent=new Intent(InfoActivity.this,  MainActivity.class);
-            startActivity(intent);
-            finish();
-        }catch(Exception e){}
-    }
 }
