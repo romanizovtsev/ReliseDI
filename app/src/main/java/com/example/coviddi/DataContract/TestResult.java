@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.example.coviddi.R;
-import com.example.coviddi.Test_activity;
 
 public class TestResult extends Fragment {
     int result;

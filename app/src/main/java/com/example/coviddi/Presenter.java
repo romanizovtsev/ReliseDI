@@ -2,19 +2,14 @@ package com.example.coviddi;
 
 import android.content.Context;
 
-import android.content.Intent;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.graphics.PointF;
 import android.view.Gravity;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
-
-import androidx.annotation.NonNull;
-
-import com.example.coviddi.DataContract.Data;
+import com.example.coviddi.DataPresenter.model;
+import com.example.coviddi.ViewInterface.MainInterface;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.DataPointInterface;
@@ -23,7 +18,6 @@ import com.jjoe64.graphview.series.OnDataPointTapListener;
 import com.jjoe64.graphview.series.PointsGraphSeries;
 import com.jjoe64.graphview.series.Series;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -31,23 +25,20 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.TreeMap;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 import static java.lang.Math.abs;
 
 public class Presenter {
-    private MainActivity view;
-    private final model model;
-
-    public Presenter(MainActivity view1)
+    //private MainActivity view;
+    private MainInterface view;
+    private final com.example.coviddi.DataPresenter.model model;
+    TextView DateText;
+    GraphView graphView;
+    public Presenter(MainActivity view1, TextView DateText, GraphView graphView)
     {
+        this.DateText=DateText;
+        this.graphView=graphView;
         this.view=view1;
         model=new model(this);
     }
@@ -118,7 +109,7 @@ public void loadInfoGraph(int selected)
     private PointsGraphSeries<DataPoint> dotSeries;
 
     public void releaseGraph(ArrayList<String> TipoMap){
-        view.graphView.removeAllSeries();
+        graphView.removeAllSeries();
         Log.e(TipoMap.size()+"","Размер мапки");
         Map<Calendar, Integer> graphMap = new HashMap<Calendar, Integer>();
 
@@ -141,10 +132,10 @@ public void loadInfoGraph(int selected)
         }
 
         LineGraphSeries series= new LineGraphSeries<>(Data);
-        view.graphView.addSeries(series);
+        graphView.addSeries(series);
 
         dotSeries = new PointsGraphSeries<>();
-        view.graphView.addSeries(dotSeries);
+        graphView.addSeries(dotSeries);
 
         series.setOnDataPointTapListener(new OnDataPointTapListener() {
             @Override
@@ -171,11 +162,11 @@ public void loadInfoGraph(int selected)
 
             }
         });
-        view.graphView.getGridLabelRenderer().setNumHorizontalLabels(Data.length);
+        graphView.getGridLabelRenderer().setNumHorizontalLabels(Data.length);
         graphMap.clear();
         sortedMap.clear();
 
-        view.graphView.getViewport().setXAxisBoundsManual(true);
+        graphView.getViewport().setXAxisBoundsManual(true);
     }
 
 
@@ -185,7 +176,7 @@ public void loadInfoGraph(int selected)
         SimpleDateFormat formatForDateNow = new SimpleDateFormat(   "dd.MM.yyyy");
         date1=formatForDateNow.format(new Date(System.currentTimeMillis() -  24 * 60 * 60 * 1000));
         date2=formatForDateNow.format(new Date(System.currentTimeMillis() - 7 * 24 * 60 * 60 * 1000));
-        view.DateText.setText(date2+"-"+date1);
+        DateText.setText(date2+"-"+date1);
     }
 
     public void Settings_Open(){
@@ -203,24 +194,6 @@ public void loadInfoGraph(int selected)
         }
 
     }
-   /* public void loadInfo(int selected)
-    {
-        Log.e("Зашел в презентер",selected+"");
-        String country=view.getCountry()[selected];
-        Date dateNow = new Date(System.currentTimeMillis()-24*60*60*1000);
-        Date DateYers=  new Date(System.currentTimeMillis()-2*24*60*60*1000);
-        SimpleDateFormat formatForDateNow = new SimpleDateFormat(   "yyyy-MM-dd");
-        model.DateNow=formatForDateNow.format(dateNow);
-        //model.getFromSQL(country);
-        Log.e("ДАТА",formatForDateNow.format(dateNow));
-        model.getInfoToday(country,"confirmed",formatForDateNow.format(DateYers));
-        model.getInfoToday(country,"confirmed",formatForDateNow.format(dateNow));
-        model.getInfoToday(country,"recovered",formatForDateNow.format(DateYers));
-        model.getInfoToday(country,"recovered",formatForDateNow.format(dateNow));
-        model.getInfoToday(country,"deaths",formatForDateNow.format(dateNow));
-        model.getInfoToday(country,"deaths",formatForDateNow.format(DateYers));
-
-    }*/
 
     public void onDestroy() {
         this.view=null;

@@ -1,4 +1,6 @@
-package com.example.coviddi;
+package com.example.coviddi.Network;
+
+import com.example.coviddi.DataModels.JsonPlaceHolderApi;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,4 +1,4 @@
-package com.example.coviddi;
+package com.example.coviddi.ViewModels;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.view.Window;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.coviddi.MainActivity;
+import com.example.coviddi.R;
 
 public class InfoActivity extends AppCompatActivity {
     ImageView Back_Info;

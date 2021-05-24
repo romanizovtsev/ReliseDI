@@ -1,8 +1,7 @@
-package com.example.coviddi;
+package com.example.coviddi.ViewModels;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -11,20 +10,19 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.FragmentManager;
+
+import com.example.coviddi.MainActivity;
+import com.example.coviddi.R;
 
 import java.util.Locale;
 
 import static com.example.coviddi.DataContract.DataDbHelper.LOG_TAG;
 
-public class Settings_Activity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
     Dialog dialog;//Окно диалога
     private MainActivity view;
 
@@ -33,7 +31,7 @@ public class Settings_Activity extends AppCompatActivity {
     String langu;
     android.content.res.Configuration conf;
 
-  /*  public Settings_Activity()
+  /*  public SettingsActivity()
     {
         this.res = getResources();
         // Change locale settings in the app.
@@ -129,7 +127,7 @@ public class Settings_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(Settings_Activity.this,  MainActivity.class);
+                    Intent intent = new Intent(SettingsActivity.this,  MainActivity.class);
                     startActivity(intent); finish();
                 }catch (Exception e){
                 }
@@ -163,7 +161,7 @@ public class Settings_Activity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try{
-            Intent intent=new Intent(Settings_Activity.this,  MainActivity.class);
+            Intent intent=new Intent(SettingsActivity.this,  MainActivity.class);
             startActivity(intent);
             finish();
         }catch(Exception e){}

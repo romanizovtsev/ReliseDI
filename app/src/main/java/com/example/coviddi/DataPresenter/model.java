@@ -1,10 +1,14 @@
-package com.example.coviddi;
+package com.example.coviddi.DataPresenter;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import com.example.coviddi.DataContract.Data;
 import com.example.coviddi.DataContract.DataDbHelper;
+import com.example.coviddi.DataModels.post1;
+import com.example.coviddi.Network.NetworkService;
+import com.example.coviddi.Presenter;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

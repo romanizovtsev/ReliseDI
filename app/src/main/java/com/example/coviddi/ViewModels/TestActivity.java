@@ -1,8 +1,7 @@
-package com.example.coviddi;
+package com.example.coviddi.ViewModels;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -23,10 +21,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import com.example.coviddi.DataContract.TestResult;
+import com.example.coviddi.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -34,7 +32,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test_activity extends AppCompatActivity {
+public class TestActivity extends AppCompatActivity {
     private FirebaseFirestore database;
     private DatabaseReference myRef;
     private List<View> allEds;
@@ -75,7 +73,7 @@ public class Test_activity extends AppCompatActivity {
                                     Answer3 = view.findViewById(R.id.answer3);
                                     allEds.add(view);
                                     linear.addView(view);
-                                    ImageView nolImage=new ImageView(Test_activity.this);
+                                    ImageView nolImage=new ImageView(TestActivity.this);
                                     nolImage.setLayoutParams(new android.view.ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,40));
                                     linear.addView(nolImage);
                                     Question.setText(document.getString("Question"));
@@ -154,7 +152,7 @@ public class Test_activity extends AppCompatActivity {
                                         }
                                     });
                                     //check.setBackground(R.drawable.buttonround);
-                                    check.setBackground(ContextCompat.getDrawable(Test_activity.this, R.drawable.buttonround));
+                                    check.setBackground(ContextCompat.getDrawable(TestActivity.this, R.drawable.buttonround));
                                     linear.addView(check);
 
                                 }
@@ -170,7 +168,7 @@ public class Test_activity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try{
-            Intent intent=new Intent(Test_activity.this,  MainActivity.class);
+            Intent intent=new Intent(TestActivity.this,  MainActivity.class);
             startActivity(intent);
             finish();
         }catch(Exception e){}

@@ -1,4 +1,4 @@
-package com.example.coviddi;
+package com.example.coviddi.DataModels;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

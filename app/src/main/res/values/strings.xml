@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Covid DI</string>
     <string name="StatTitle">Статистика</string>
+    <string name="TestName">Test</string>
     <string name="StatTitle2">Динамика заболеваемости</string>
     <string-array name="Country">
 
